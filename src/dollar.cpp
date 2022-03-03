@@ -4,3 +4,7 @@
 
 #include "public/dollar.h"
 
+int Dollar::times(uint16_t num){
+    amount = 10;
+    return amount;
+}
