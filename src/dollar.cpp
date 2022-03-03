@@ -4,7 +4,11 @@
 
 #include "public/dollar.h"
 
-int Dollar::times(uint16_t num){
-    amount = 10;
+int Dollar::times(uint16_t num) {
+    amount = amount * num;
     return amount;
+}
+
+Dollar::Dollar(int amount) : amount(amount) {
+
 }

@@ -8,6 +8,7 @@
 
 class Dollar {
 public:
+    Dollar(int amount);
     int times(uint16_t num);
     int amount;
 };

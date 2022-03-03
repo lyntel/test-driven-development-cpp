@@ -11,7 +11,7 @@ TEST(Current,TestGtestEnv){
 }
 
 TEST(Current,TestMultiplication){
-    Dollar* five = new Dollar();
+    Dollar* five = new Dollar(5);
     five->times(2);
     EXPECT_EQ(10,five->amount);
 }
