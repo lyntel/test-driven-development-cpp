@@ -9,6 +9,10 @@ namespace TDD {
     class Money {
     public:
         Money(int amount);
+
+    protected:
+        bool Equals(const Money &rhs) const;
+
     protected:
         int amount;
     };

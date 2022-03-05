@@ -8,4 +8,9 @@ namespace TDD {
     Money::Money(int amount) : amount(amount) {
 
     }
+
+    bool Money::Equals(const Money &rhs) const {
+        bool result = (this->amount == rhs.amount);
+        return result;
+    }
 }

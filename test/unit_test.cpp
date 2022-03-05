@@ -8,6 +8,7 @@
 
 using Dollar = TDD::Dollar;
 using Franc = TDD::Franc;
+using Money = TDD::Money;
 
 TEST(Currency, TestGtestEnv) {
     int result = 1 + 2;
@@ -25,7 +26,8 @@ TEST(Currency, TestMultiplication) {
 }
 
 TEST(Currency, TestEquals) {
-    EXPECT_TRUE(Dollar(5) == (Dollar(5)));
+
+    EXPECT_TRUE(Dollar(5) == Dollar(5));
     EXPECT_FALSE(Dollar(5) == (Dollar(6)));
 }
 
