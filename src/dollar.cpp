@@ -19,5 +19,10 @@ namespace TDD {
     bool Dollar::Equals(std::shared_ptr<Dollar> lhs) {
         return (lhs->amount == this->amount);
     }
+
+    bool Dollar::operator== (const Dollar& rhs) const{
+        bool result = (this->amount == rhs.amount);
+        return result;
+    }
 }
 

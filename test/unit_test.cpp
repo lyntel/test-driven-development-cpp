@@ -5,7 +5,7 @@
 #include <gmock/gmock.h>
 #include "dollar.h"
 
-using TDD::Dollar;
+using Dollar = TDD::Dollar;
 
 TEST(Current, TestGtestEnv) {
     int result = 1 + 2;
@@ -15,10 +15,11 @@ TEST(Current, TestGtestEnv) {
 TEST(Current, TestMultiplication) {
     std::shared_ptr<Dollar> five = std::make_shared<Dollar>(5);
     auto product = five->Times(2);
-    EXPECT_EQ(10, product->amount);
+    const Dollar& product_obj =  *product.get();
+    EXPECT_THAT(Dollar(10), product_obj);
 
     auto product2 = five->Times(3);
-    EXPECT_EQ(15, product2->amount);
+    EXPECT_THAT(Dollar(15), *product2.get());
 }
 
 TEST(Current, TestEquality) {

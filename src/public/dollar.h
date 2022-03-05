@@ -4,14 +4,23 @@
 
 #ifndef SRC_DOLLAR_H_
 #define SRC_DOLLAR_H_
+
 #include <cstdint>
 #include <memory>
-namespace TDD{
+
+namespace TDD {
     class Dollar {
     public:
         Dollar(int amount);
+
         std::shared_ptr<Dollar> Times(uint16_t num);
+
         bool Equals(std::shared_ptr<Dollar> lhs);
+
+        //类比较重载等于
+        bool operator==(const Dollar &rhs) const;
+
+    private:
         int amount;
     };
 }
