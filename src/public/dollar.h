@@ -7,18 +7,16 @@
 
 #include <cstdint>
 #include <memory>
+#include "money.h"
 
 namespace TDD {
-    class Dollar {
+    class Dollar : public Money{
     public:
         Dollar(int amount);
 
         std::shared_ptr<Dollar> Times(uint16_t num);
         //类比较重载等于
         bool operator==(const Dollar &rhs) const;
-
-    private:
-        int amount;
     };
 }
 #endif //SRC_DOLLAR_H_

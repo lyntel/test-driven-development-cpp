@@ -12,7 +12,7 @@ namespace TDD {
         return new_item;
     }
 
-    Dollar::Dollar(int amount) : amount(amount) {
+    Dollar::Dollar(int amount) : Money(amount) {
 
     }
 

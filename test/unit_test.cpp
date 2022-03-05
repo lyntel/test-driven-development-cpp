@@ -40,3 +40,4 @@ TEST(Currency, TestFrancEquals) {
     EXPECT_TRUE(Franc(5) == (Franc(5)));
     EXPECT_FALSE(Franc(5) == (Franc(6)));
 }
+
