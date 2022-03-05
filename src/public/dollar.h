@@ -5,13 +5,14 @@
 #ifndef SRC_DOLLAR_H_
 #define SRC_DOLLAR_H_
 #include <cstdint>
-
-class Dollar {
-public:
-    Dollar(int amount);
-    int times(uint16_t num);
-    int amount;
-};
-
-
+#include <memory>
+namespace TDD{
+    class Dollar {
+    public:
+        Dollar(int amount);
+        std::shared_ptr<Dollar> Times(uint16_t num);
+        bool Equals(std::shared_ptr<Dollar> lhs);
+        int amount;
+    };
+}
 #endif //SRC_DOLLAR_H_
