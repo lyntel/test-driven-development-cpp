@@ -14,9 +14,6 @@ namespace TDD {
         std::shared_ptr <Franc> Times(uint16_t num);
 
         bool operator==(const Franc &rhs) const;
-
-    private:
-        int amount;
     };
 }
 
