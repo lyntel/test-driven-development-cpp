@@ -4,10 +4,10 @@
 
 #ifndef SRC_PUBLIC_FRANC_H_
 #define SRC_PUBLIC_FRANC_H_
-#include <memory>
+#include "money.h"
 
 namespace TDD {
-    class Franc {
+    class Franc : public Money{
     public:
         Franc(int amount);
 

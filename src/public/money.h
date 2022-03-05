@@ -5,6 +5,9 @@
 #ifndef SRC_MONEY_H_
 #define SRC_MONEY_H_
 
+#include <cstdint>
+#include <memory>
+
 namespace TDD {
     class Money {
     public:
@@ -14,7 +17,7 @@ namespace TDD {
         bool Equals(const Money &rhs) const;
 
     protected:
-        int amount;
+        int amount = 0;
     };
 }
 

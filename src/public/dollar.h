@@ -5,8 +5,6 @@
 #ifndef SRC_DOLLAR_H_
 #define SRC_DOLLAR_H_
 
-#include <cstdint>
-#include <memory>
 #include "money.h"
 
 namespace TDD {

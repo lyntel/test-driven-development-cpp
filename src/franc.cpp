@@ -6,7 +6,7 @@
 
 namespace TDD {
 
-    Franc::Franc(int amount) : amount(amount) {
+    Franc::Franc(int amount) : Money(amount) {
 
     }
 
@@ -17,7 +17,7 @@ namespace TDD {
     }
 
     bool Franc::operator==(const Franc &rhs) const {
-        bool result = (this->amount == rhs.amount);
-        return result;
+        auto base = static_cast<Money>(rhs);
+        return Equals(base);
     }
 }
