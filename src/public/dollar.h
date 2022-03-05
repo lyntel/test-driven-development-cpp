@@ -14,9 +14,6 @@ namespace TDD {
         Dollar(int amount);
 
         std::shared_ptr<Dollar> Times(uint16_t num);
-
-        bool Equals(std::shared_ptr<Dollar> lhs);
-
         //类比较重载等于
         bool operator==(const Dollar &rhs) const;
 

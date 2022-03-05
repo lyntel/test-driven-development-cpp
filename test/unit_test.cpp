@@ -24,9 +24,9 @@ TEST(Currency, TestMultiplication) {
     EXPECT_THAT(Dollar(15), *product2.get());
 }
 
-TEST(Currency, TestEquality) {
-    EXPECT_TRUE(std::make_shared<Dollar>(5)->Equals(std::make_shared<Dollar>(5)));
-    EXPECT_FALSE(std::make_shared<Dollar>(5)->Equals(std::make_shared<Dollar>(6)));
+TEST(Currency, TestEquals) {
+    EXPECT_TRUE(Dollar(5) == (Dollar(5)));
+    EXPECT_FALSE(Dollar(5) == (Dollar(6)));
 }
 
 TEST(Currency, TestFrancMuliplication) {
@@ -34,4 +34,9 @@ TEST(Currency, TestFrancMuliplication) {
     auto product = five->Times(2);
     const Franc &product_obj = *product.get();
     EXPECT_THAT(Franc(10), product_obj);
+}
+
+TEST(Currency, TestFrancEquals) {
+    EXPECT_TRUE(Franc(5) == (Franc(5)));
+    EXPECT_FALSE(Franc(5) == (Franc(6)));
 }
