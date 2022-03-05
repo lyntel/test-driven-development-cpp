@@ -11,7 +11,10 @@ TEST(Current,TestGtestEnv){
 }
 
 TEST(Current,TestMultiplication){
-    Dollar* five = new Dollar(5);
-    five->times(2);
-    EXPECT_EQ(10,five->amount);
+    std::shared_ptr<Dollar> five = std::make_shared<Dollar>(5);
+    auto product = five->times(2);
+    EXPECT_EQ(10,product->amount);
+
+    auto product2 = five->times(3);
+    EXPECT_EQ(15,product2->amount);
 }
