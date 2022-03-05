@@ -23,4 +23,5 @@ TEST(Current, TestMultiplication) {
 
 TEST(Current, TestEquality) {
     EXPECT_TRUE(std::make_shared<Dollar>(5)->Equals(std::make_shared<Dollar>(5)));
+    EXPECT_FALSE(std::make_shared<Dollar>(5)->Equals(std::make_shared<Dollar>(6)));
 }

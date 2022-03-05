@@ -17,7 +17,7 @@ namespace TDD {
     }
 
     bool Dollar::Equals(std::shared_ptr<Dollar> lhs) {
-        return true;
+        return (lhs->amount == this->amount);
     }
 }
 
