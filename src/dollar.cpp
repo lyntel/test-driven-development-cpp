@@ -12,7 +12,7 @@ namespace TDD {
     //返回新的对象
     std::shared_ptr<Money> Dollar::Times(uint16_t num) {
         std::shared_ptr<Dollar> new_item = std::make_shared<Dollar>(amount);
-        new_item->amount *= num;
+        TimeImpl(new_item,num);
         return new_item;
     }
 

@@ -12,7 +12,7 @@ namespace TDD {
 
     std::shared_ptr<Money> Franc::Times(uint16_t num) {
         auto new_item = std::make_shared<Franc>(this->amount);
-        new_item->amount *= num;
+        TimeImpl(new_item,num);
         return new_item;
     }
 
