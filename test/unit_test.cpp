@@ -18,11 +18,11 @@ TEST(Currency, TestGtestEnv) {
 TEST(Currency, TestMultiplication) {
     std::shared_ptr<Dollar> five = std::make_shared<Dollar>(5);
     auto product = five->Times(2);
-    const Dollar &product_obj = *product.get();
+    const Dollar &product_obj = *std::dynamic_pointer_cast<Dollar>(product).get();
     EXPECT_THAT(Dollar(10), product_obj);
 
     auto product2 = five->Times(3);
-    EXPECT_THAT(Dollar(15), *product2.get());
+    EXPECT_THAT(Dollar(15), *std::dynamic_pointer_cast<Dollar>(product2).get());
 }
 
 TEST(Currency, TestEquals) {
@@ -34,7 +34,7 @@ TEST(Currency, TestEquals) {
 TEST(Currency, TestFrancMuliplication) {
     std::shared_ptr<Franc> five = std::make_shared<Franc>(5);
     auto product = five->Times(2);
-    const Franc &product_obj = *product.get();
+    const Franc &product_obj = *std::dynamic_pointer_cast<Franc>(product).get();
     EXPECT_THAT(Franc(10), product_obj);
 }
 

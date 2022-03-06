@@ -12,7 +12,9 @@ namespace TDD {
     public:
         Dollar(int amount);
 
-        std::shared_ptr<Dollar> Times(uint16_t num);
+//        std::shared_ptr<Dollar> Times(uint16_t num);
+        virtual std::shared_ptr<Money> Times(uint16_t num) override;
+
         //类比较重载等于
         bool operator==(const Dollar &rhs) const;
     };

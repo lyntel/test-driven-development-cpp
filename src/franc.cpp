@@ -10,14 +10,14 @@ namespace TDD {
 
     }
 
-    std::shared_ptr<Franc> Franc::Times(uint16_t num) {
+    std::shared_ptr<Money> Franc::Times(uint16_t num) {
         auto new_item = std::make_shared<Franc>(this->amount);
         new_item->amount *= num;
         return new_item;
     }
 
     bool Franc::operator==(const Franc &rhs) const {
-        auto base = static_cast<Money>(rhs);
+        const Money* base = &rhs;
         return Equals(base);
     }
 }

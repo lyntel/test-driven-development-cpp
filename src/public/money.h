@@ -9,12 +9,18 @@
 #include <memory>
 
 namespace TDD {
-    class Money {
+    class Money;
+    class MoneyInterface {
+    public:
+        virtual std::shared_ptr<Money> Times(uint16_t num) = 0;
+    };
+
+    class Money : public MoneyInterface{
     public:
         Money(int amount);
 
     protected:
-        bool Equals(const Money &rhs) const;
+        bool Equals(const Money* rhs) const;
 
     protected:
         int amount = 0;
